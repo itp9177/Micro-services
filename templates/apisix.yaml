@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: $Title$
+  name: Title
   labels:
-    app: $Title$
+    app: Title
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: $Title$
+      app: Title
   template:
     metadata:
-      name: $Title$
+      name: Title
       labels:
-        app: $Title$
+        app: Title
     spec:
       containers:
-        - name: $Title$
-          image: $Image$
+        - name: Title
+          image: Image
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
-      $END$
+      

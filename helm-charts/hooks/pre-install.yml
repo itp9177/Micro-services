@@ -1,0 +1,22 @@
+kind: Hook
+apiVersion: v1
+weight: 0
+
+# Create namespace "my-namespace"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ingress-apisix
+
+# Add label "app: my-app" to the namespace
+---
+apiVersion: v1
+kind: Patch
+metadata:
+  name: namespace-label
+  namespace: my-namespace
+spec:
+  patchType: JSONPatch
+  patch: |-
+    [{ "op": "add", "path": "/metadata/labels", "value": { "app": "my-app" } }]

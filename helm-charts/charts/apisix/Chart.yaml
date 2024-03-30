@@ -1,7 +1,8 @@
 apiVersion: v2
-name: helmMicroservice
+name: apisix
 description: A Helm chart for Kubernetes
-
+metadata:
+  namespace: ingress-apisix
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -24,10 +25,4 @@ version: 0.1.0
 appVersion: "1.16.0"
 dependencies:
   - name: apisix
-    version: latest
-  - name: istio-base
-    version: latest
-    import-values:
-    repository: https://istio-release.storage.googleapis.com/charts
-  - name:
-    version: latest
+    version:
