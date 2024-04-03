@@ -1,11 +1,29 @@
-resource "helm_release" "istio" {
-  name  = "redis"
+resource "helm_release" "istio-base" {
+  name  = "istio-base"
   namespace = istio-system
   create_namespace = true
-  chart = "https://charts.bitnami.com/bitnami/redis-10.7.16.tgz"
+  chart = "./charts/base-1.21.0"
 
   set {
-    name  = "dashboard.enabled"
-    value = "true"
+    name  = "defaultRevision"
+    value = "default"
+  }
+}
+
+resource "helm_release" "istiod" {
+  name  = "istiod"
+  namespace = istio-system
+  chart = "./charts/istiod-1.21.0.tgz"
+
+}
+#kiali for istio
+resource "helm_release" "kiali-server" {
+  name  = "kiali-server"
+  namespace = istio-system
+  chart = "./charts/kiali-server-1.82.0.tgz"
+
+  set {
+    name  = "auth.strategy"
+    value = "anonymous"
   }
 }
