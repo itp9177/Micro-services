@@ -37,7 +37,6 @@ resource "helm_release" "apisix" {
     name  = "dashboard.enabled"
     value = "true"
   }
-
 }
 
 #add the dashboard
