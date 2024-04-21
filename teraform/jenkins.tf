@@ -1,3 +1,8 @@
+resource "kubernetes_namespace" "jenkins" {
+  metadata{
+    name = "jenkins"
+  }
+}
 #create storageclass
 resource "kubernetes_manifest" "jenkins_storageclass" {
  # provider = kubernetes-alpha
