@@ -29,3 +29,12 @@ resource "helm_release" "kiali-server" {
     value = "anonymous"
   }
 }
+
+#kiali prometheus
+resource "helm_release" "kiali-prometheus" {
+  name  = "kiali-prometheus"
+  namespace = "istio-system"
+  create_namespace = true
+  chart = "./charts/kiali-0.1.0.tgz"
+
+}
