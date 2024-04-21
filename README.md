@@ -1,6 +1,6 @@
 ### Ecommerce microservice
-## Quick start 
-## Architecture
+### Quick start 
+### Architecture
 ### RoadMap
 - [x]  Microservices architecture
 - [ ]  Cloud components
