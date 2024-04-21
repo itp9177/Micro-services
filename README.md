@@ -50,7 +50,7 @@ kiali dashboard
 ```javascript
 localhost:20001
 ```
-##### step 5
+##### step 6
 jenkins admin password
 
 ```javascript
