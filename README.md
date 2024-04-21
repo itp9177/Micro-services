@@ -73,5 +73,5 @@ echo http://$NODE_IP:$NODE_PORT/login
 ### RoadMap
 - [x]  Microservices architecture
 - [x]  Cloud components
-- [x]  support for AWS EKS cluster installation
-- [x]  support for GCP GKE cluster installation
+- []  support for AWS EKS cluster installation
+- []  support for GCP GKE cluster installation
