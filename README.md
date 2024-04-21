@@ -4,10 +4,10 @@
 ##### step 1 (requirements)
 
 ```javascript
-you need kubectl, minikube, terraform an helm installed 
+you need kubectl, minikube, terraform and helm installed 
 ```
 ##### step 2
-configure minikube cluster with atleast 7000MB memoery 
+configure minikube cluster with at least 7000MB memory 
 
 ```javascript
 minikube start --memory=7000mb
@@ -38,7 +38,7 @@ terraform apply
 
 ```
 
-this will may take couple of minutes install
+this may take couple of minutes to install
 
 ##### step 5
 one installation is complete, access the kiali dashboard
@@ -50,7 +50,8 @@ kiali dashboard
 ```javascript
 localhost:20001
 ```
-#### jenkins admin password
+##### step 5
+jenkins admin password
 
 ```javascript
 jsonpath="{.data.jenkins-admin-password}"
@@ -58,7 +59,7 @@ secret=$(kubectl get secret -n jenkins jenkins -o jsonpath=$jsonpath)
 echo $(echo $secret | base64 --decode)
 ```
 
-#### jenkins urls
+jenkins urls
 ```javascript
 
 jsonpath="{.spec.ports[0].nodePort}"
@@ -71,4 +72,4 @@ echo http://$NODE_IP:$NODE_PORT/login
 
 ### RoadMap
 - [x]  Microservices architecture
-- [ ]  Cloud components
+- [x]  Cloud components
