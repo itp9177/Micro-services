@@ -21,7 +21,7 @@ cd /teraform
 configure provider.tf 
 
 provider "kubernetes" {
-  config_path    = "<your configi path>" (ex : /home/indu/.kube/config" )
+  config_path    = "<your configi path>" (eg : /home/indu/.kube/config" )
   config_context = "minikube"
 }
 ```
@@ -41,7 +41,7 @@ terraform apply
 this may take couple of minutes to install
 
 ##### step 5
-one installation is complete, access the kiali dashboard
+once installation is complete, access the kiali dashboard
 
 ```javascript
 kubectl port-forward svc/kiali 20001:20001 -n istio-system
