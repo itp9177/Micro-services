@@ -39,6 +39,6 @@ resource "helm_release" "jenkins" {
   chart =  "./charts/jenkins-5.1.5.tgz"
 
   values = [
-    file("./maifests/jenkins/jenkins-values.yaml")
+    file("./maifests/jenkins/jenkins-values.yml")
   ]
 }
