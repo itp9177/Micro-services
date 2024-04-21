@@ -13,6 +13,8 @@ resource "helm_release" "istio-base" {
 resource "helm_release" "istiod" {
   name  = "istiod"
   namespace = "istio-system"
+  create_namespace = true
+
   chart = "./charts/istiod-1.21.0.tgz"
 
 }
@@ -20,6 +22,8 @@ resource "helm_release" "istiod" {
 resource "helm_release" "kiali-server" {
   name  = "kiali-server"
   namespace = "istio-system"
+  create_namespace = true
+
   chart = "./charts/kiali-server-1.82.0.tgz"
 
   set {
