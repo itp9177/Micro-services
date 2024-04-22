@@ -11,7 +11,7 @@ resource "helm_release" "strimzi-cluster-operator" {
 
 #kafka cluster 
 resource "kubernetes_manifest" "kafkacluster" {
-  #provider = kubernetes-alpha
+
 
   manifest = yamldecode(file("./maifests/kafka/kafkacluster.yml"))
 }
