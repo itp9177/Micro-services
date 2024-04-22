@@ -1,5 +1,6 @@
 ### Ecommerce microservice
 ### Architecture
+![App Screenshot](https://raw.githubusercontent.com/itp9177/Micro-services/main/architecture.png)
 ### Quick start 
 ##### step 1 (requirements)
 
