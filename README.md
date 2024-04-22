@@ -51,6 +51,20 @@ kiali dashboard
 localhost:20001
 ```
 ##### step 6
+Apisix dashboard url
+
+```javascript
+export POD_NAME=$(kubectl get pods --namespace ingress-apisix -l "app.kubernetes.io/name=apisix-dashboard,app.kubernetes.io/instance=apisix-dashboard" -o jsonpath="{.items[0].metadata.name}")
+
+ export CONTAINER_PORT=$(kubectl get pod --namespace ingress-apisix $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+
+ kubectl --namespace ingress-apisix port-forward $POD_NAME 8080:$CONTAINER_PORT
+```
+```javascript
+
+username : admin , password : admin
+```
+##### step 7
 jenkins admin password
 
 ```javascript
