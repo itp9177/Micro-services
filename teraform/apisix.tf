@@ -32,19 +32,15 @@ resource "helm_release" "apisix" {
     name  = "ingress-controller.config.apisix.adminAPIVersion"
     value = "v3"
   }
-
-  set {
-    name  = "dashboard.enabled"
-    value = "true"
-  }
+  
 }
 
 #add the dashboard
 
 resource "helm_release" "apisix-dashboard" {
   name      = "apisix-dashboard"
-  namespace = "apisix"
+  namespace = "ingress-apisix"
   create_namespace = "true"
   chart     = "./charts/apisix-dashboard-0.8.2.tgz"
-
+  
 }
