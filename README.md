@@ -7,10 +7,10 @@
 you need kubectl, minikube, terraform and helm installed 
 ```
 ##### step 2
-configure minikube cluster with at least 7000MB memory 
+configure minikube cluster with at least 12000MB memory 
 
 ```javascript
-minikube start --memory=7000mb
+minikube start --memory=12000mb
 ```
 
 ##### step 3

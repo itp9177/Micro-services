@@ -21,6 +21,7 @@ resource "kubernetes_manifest" "jenkins_serviceaccount" {
   #provider = kubernetes-alpha
 
   manifest = yamldecode(file("./maifests/jenkins/serviceaccount.yml"))
+  depends_on=[kubernetes_namespace.jenkins]
 }
 
 #create jenkins service account
