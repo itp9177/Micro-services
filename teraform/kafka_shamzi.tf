@@ -12,7 +12,7 @@ resource "helm_release" "strimzi-cluster-operator" {
 #kafka cluster 
 resource "helm_release" "kafka-cluster" {
   name  = "kafka-cluster"
-  chart =  "./charts/kafka-operator-0.10.tgz"
+  chart =  "./charts/kafka-operator-0.1.0.tgz"
   
   depends_on=[helm_release.strimzi-cluster-operator]
 }
