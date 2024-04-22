@@ -10,8 +10,9 @@ resource "helm_release" "strimzi-cluster-operator" {
 }
 
 #kafka cluster 
-resource "kubernetes_manifest" "kafkacluster" {
-
-
-  manifest = yamldecode(file("./maifests/kafka/kafkacluster.yml"))
+resource "helm_release" "kafka-cluster" {
+  name  = "kafka-cluster"
+  chart =  "./charts/kafka-operator-0.10.tgz"
+  
+  depends_on=[helm_release.strimzi-cluster-operator]
 }
