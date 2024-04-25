@@ -26,7 +26,18 @@ provider "kubernetes" {
   config_context = "minikube"
 }
 ```
+```javascript
+cd /teraform 
 
+configure helm.tf 
+
+provider "helm" {
+  kubernetes {
+    config_path = "<your config path>" (eg : /home/indu/.kube/config" )
+  }
+}
+
+```
 ##### step 4 
 terraform init, plan and apply
 

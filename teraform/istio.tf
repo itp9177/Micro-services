@@ -34,5 +34,6 @@ resource "helm_release" "kiali-server" {
 resource "helm_release" "kiali-prometheus" {
   name  = "kiali-prometheus"
   chart = "./charts/kiali-0.1.0.tgz"
+   depends_on=[helm_release.kiali-server]
 
 }
