@@ -1,6 +1,6 @@
 package com.itp.analytics.kafka;
 
-import com.itp.climate.data.Collector;
+import com.itp.analytics.data.Collector;
 import com.itp.openapi.model.V1ForecastGet200Response;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
